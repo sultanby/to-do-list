@@ -46,7 +46,7 @@ const handleSubmit = async (e) => {
   catch (err) {
     setError(err);
   }
-}
+};
 
   useEffect(() => {
     fetchTodos();
