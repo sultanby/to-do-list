@@ -20,6 +20,10 @@
     ],
     "react/prop-types": "off",
     "no-console": "warn",
-    "node/no-missing-import": "warn"
+    "node/no-missing-import": ["error", {
+      "allowModules": [],
+      "resolvePaths": ["/path/to/a/modules/directory"],
+      "tryExtensions": [".js", ".json", ".node"]
+  }]
   }
 }

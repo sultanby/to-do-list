@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { getTodos, createTodo, removeTodo } from './util';
+import { getTodos, createTodo, removeTodo } from './util/index';
 
 const App = () => {
   const [todo, setTodo] = useState({
@@ -23,7 +23,7 @@ const handleDelete = async (id) => {
     await removeTodo(id);
     fetchTodos();
   }
-  catch {
+  catch (err) {
     setError(err);
   }
 };
